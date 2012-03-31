@@ -1,0 +1,100 @@
+\documentclass[a4paper,14pt]{jsarticle}
+
+\usepackage[dvipdfm]{pict2e}
+\usepackage[dvipdfmx,hiresbb]{graphicx}
+
+\setlength{\voffset}{-1.1cm}
+\setlength{\textheight}{18cm}
+
+\pagestyle{empty}
+
+\renewcommand{\labelenumi}{(\roman{enumi})}
+
+%% \begin{problem}{問題番号}{点数}
+%%   内容
+%% \end{problem}
+\makeatletter
+\newenvironment{problem}[2]
+{\setlength{\unitlength}{1cm}
+  \hspace{-18pt}
+  \begin{picture}(0.6,0.6)
+    \linethickness{1.25pt}
+    \put(0,0){\framebox(0.6,0.6){{\large #1}}}
+  \end{picture}
+  \hfill{}
+  \raisebox{2pt}{{\footnotesize (#2 \hspace{-5pt} 点)}} \hspace{-3pt} \\
+  \vspace{-20pt}
+  \@tempdima=\textwidth
+  \advance \@tempdima by -0.4cm
+  \begin{flushright}
+    \begin{minipage}{\@tempdima}
+    \parindent=1zw}
+{\end{minipage}\end{flushright}}
+\makeatother
+
+
+\begin{document}
+
+%% ヘッダ
+\begin{center}
+  \textbf{以下の問題を\underline{コンピュータを用いて}解きなさい。}
+\end{center}
+
+\vspace{18pt}
+
+%% 問1
+\begin{problem}{1}{20}
+  1と自分自身以外に約数をもたない2以上の自然数を素数という。$10^{6}$以下の素数の個数を求めよ。
+\end{problem}
+
+\vspace{18pt}
+
+%% 問2
+\begin{problem}{2}{40}
+  2次元平面上に4点$(0, 0)$、$(19775809, 18913091)$、$(862718, 38688900)$、$(-18913091,19775809)$を頂点とする正方形がある。この正方形の各頂点を辺の中点にもつ凸な四辺形のうち、その頂点がすべて格子点であるようなものの面積の総和を求めよ。
+  \vspace{-15pt}
+  \begin{flushright}
+    {\small （出典：Codechef）}
+  \end{flushright}
+\end{problem}
+
+\vspace{10pt}
+
+%% 問3
+\begin{problem}{3}{40}
+  縦横のサイズがそれぞれ9の格子上に1から81までの数字を1つづつ並べたい。このとき、次の2つの条件を満たす並べ方は何通りあるか。
+  \begin{description}
+    \item (i) 各数字はその1つ上のマスの数字よりも大きい
+    \item (\hspace{-1pt}i\hspace{-1pt}i\hspace{-1pt}) 各数字はその1つ左のマスの数字よりも大きい
+  \end{description}
+  
+  \vspace{-15pt}
+  \begin{flushright}
+    {\small （出典：ZOJ）}
+  \end{flushright}
+\end{problem}
+
+\vspace{22pt}
+
+%% 説明
+\hspace{-30pt}
+\begin{minipage}{10cm}
+  \begin{tabular}{rl}
+    サークル概要 & プログラミングや、パソコンを使った音楽や絵などの \\[-4pt]
+    & 創作をするサークルです \\[-1pt]
+    連絡先 & info@kmc.gr.jp \\[-1pt]
+    Webサイト & http://kmc.jp \\[-1pt]
+    説明会 & 4/4 18:00 百万遍レブン書房前 \\[-4pt]
+    & 以降月木（祝日除く）18:15 吉田南共北ショップ前
+  \end{tabular}  
+\end{minipage}
+
+\hspace{15pt}
+
+%% ロゴ
+\begin{center}
+  \includegraphics[bb=0 0 2413 1551,width=3cm]{KMC.bmp}
+\end{center}
+
+\end{document}
+

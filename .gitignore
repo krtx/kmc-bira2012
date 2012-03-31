@@ -1,0 +1,9 @@
+*~
+
+*.dvi
+*.log
+*.aux
+*.bb
+*.xbb
+
+bira.pdf
